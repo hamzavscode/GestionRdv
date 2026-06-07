@@ -9,7 +9,7 @@ import com.example.gestionrendez_vous.data.models.Client
 import com.example.gestionrendez_vous.data.models.Task
 import com.example.gestionrendez_vous.data.models.User
 
-@Database(entities = [User::class, Client::class, Appointment::class, Task::class], version = 1, exportSchema = false)
+@Database(entities = [User::class, Client::class, Appointment::class, Task::class], version = 4, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
     
     abstract fun appDao(): AppDao
