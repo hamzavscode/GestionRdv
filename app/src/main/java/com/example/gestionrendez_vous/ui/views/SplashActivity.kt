@@ -6,6 +6,7 @@ import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import com.example.gestionrendez_vous.MainApplication
+import com.example.gestionrendez_vous.MainActivity
 import com.example.gestionrendez_vous.R
 
 class SplashActivity : AppCompatActivity() {

@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.gestionrendez_vous.MainApplication
+import com.example.gestionrendez_vous.MainActivity
 import com.example.gestionrendez_vous.databinding.ActivityLoginBinding
 import com.example.gestionrendez_vous.ui.viewmodels.AuthViewModel
 

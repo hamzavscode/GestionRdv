@@ -1,10 +1,13 @@
-package com.example.gestionrendez_vous.ui.views
+package com.example.gestionrendez_vous
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.example.gestionrendez_vous.R
 import com.example.gestionrendez_vous.databinding.ActivityMainBinding
+import com.example.gestionrendez_vous.ui.views.HomeFragment
+import com.example.gestionrendez_vous.ui.views.CalendarFragment
+import com.example.gestionrendez_vous.ui.views.ClientsFragment
+import com.example.gestionrendez_vous.ui.views.SettingsFragment
 
 class MainActivity : AppCompatActivity() {
 
