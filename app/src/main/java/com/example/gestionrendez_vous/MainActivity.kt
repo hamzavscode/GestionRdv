@@ -27,15 +27,15 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.nav_calendar -> {
-                    // loadFragment(CalendarFragment())
+                    loadFragment(CalendarFragment())
                     true
                 }
                 R.id.nav_clients -> {
-                    // loadFragment(ClientsFragment())
+                    loadFragment(ClientsFragment())
                     true
                 }
                 R.id.nav_settings -> {
-                    // loadFragment(SettingsFragment())
+                    loadFragment(SettingsFragment())
                     true
                 }
                 else -> false

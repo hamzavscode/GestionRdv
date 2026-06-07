@@ -31,5 +31,6 @@
         <activity android:name=".ui.views.RegisterActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".ui.views.TasksActivity" />
+        <activity android:name=".ui.views.AddAppointmentActivity" />
     </application>
 </manifest>
