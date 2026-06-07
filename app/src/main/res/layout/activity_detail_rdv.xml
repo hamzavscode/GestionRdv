@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_theme_background"
+    tools:context=".ui.detail.DetailRdvActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:theme="@style/ThemeOverlay.Material3.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="@color/md_theme_primary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:titleCollapseMode="fade">
+
+            <ImageView
+                android:id="@+id/ivDetailHero"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@android:drawable/ic_menu_gallery"
+                app:layout_collapseMode="parallax" />
+
+            <!-- Dark gradient overlay for text readability -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#40000000" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="@android:drawable/ic_menu_revert" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="100dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/tvDetailTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Titre du Rendez-vous"
+                android:textColor="@color/md_theme_onBackground"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipDetailStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="En attente"
+                android:textColor="@color/status_en_attente"
+                android:textSize="14sp"
+                app:chipBackgroundColor="@color/status_en_attente_bg"
+                app:chipStrokeWidth="0dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:cardBackgroundColor="@color/md_theme_surface"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/tvDetailDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="12dp"
+                        android:text="25 Décembre 2026, 14:30"
+                        android:textColor="@color/md_theme_onSurface"
+                        android:textSize="16sp"
+                        app:drawableStartCompat="@android:drawable/ic_menu_today"
+                        app:drawableTint="@color/md_theme_primary" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="16dp"
+                        android:background="#E2E8F0" />
+
+                    <TextView
+                        android:id="@+id/tvDetailLieu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="12dp"
+                        android:text="Paris, France"
+                        android:textColor="@color/md_theme_onSurface"
+                        android:textSize="16sp"
+                        app:drawableStartCompat="@android:drawable/ic_menu_mylocation"
+                        app:drawableTint="@color/md_theme_primary" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Description"
+                android:textColor="@color/md_theme_secondary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvDetailDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Détails de la description ici..."
+                android:textColor="@color/md_theme_onBackground"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Bottom Action Bar -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:cardElevation="16dp"
+        app:cardBackgroundColor="@color/md_theme_surface">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:weightSum="2">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDelete"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="Supprimer"
+                android:textColor="@color/status_annule"
+                app:strokeColor="@color/status_annule"
+                app:icon="@android:drawable/ic_menu_delete"
+                app:iconTint="@color/status_annule"
+                app:cornerRadius="12dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEdit"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="Modifier"
+                app:icon="@android:drawable/ic_menu_edit"
+                app:cornerRadius="12dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

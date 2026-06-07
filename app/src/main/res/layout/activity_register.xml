@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    tools:context=".ui.register.RegisterActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingBottom="32dp">
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="48dp"
+                android:src="@android:drawable/ic_menu_today"
+                app:tint="@color/md_theme_onPrimary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Inscription"
+                android:textColor="@color/md_theme_onPrimary"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="32dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/etNomLayout"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nom complet"
+                        app:startIconDrawable="@android:drawable/ic_menu_myplaces">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etNom"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPersonName" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/etEmailLayout"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="Email"
+                        app:startIconDrawable="@android:drawable/ic_dialog_email">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textEmailAddress" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/etPasswordLayout"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="Mot de passe"
+                        app:endIconMode="password_toggle"
+                        app:startIconDrawable="@android:drawable/ic_lock_lock">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/etPasswordConfirmLayout"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:hint="Confirmer le mot de passe"
+                        app:endIconMode="password_toggle"
+                        app:startIconDrawable="@android:drawable/ic_lock_lock">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPasswordConfirm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnRegister"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="32dp"
+                        android:text="Créer mon compte"
+                        android:textSize="16sp"
+                        app:cornerRadius="12dp" />
+
+                    <TextView
+                        android:id="@+id/tvGoToLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Déjà inscrit ? Se connecter"
+                        android:textAlignment="center"
+                        android:textColor="@color/md_theme_primary"
+                        android:padding="8dp"
+                        android:background="?attr/selectableItemBackground" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

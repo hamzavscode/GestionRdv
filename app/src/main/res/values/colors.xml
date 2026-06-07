@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary Brand Colors -->
+    <color name="md_theme_primary">#2563EB</color> <!-- Blue -->
+    <color name="md_theme_onPrimary">#FFFFFF</color>
+    <color name="md_theme_primaryContainer">#DBEAFE</color>
+    <color name="md_theme_onPrimaryContainer">#1E3A8A</color>
+
+    <!-- Secondary Brand Colors -->
+    <color name="md_theme_secondary">#0891B2</color> <!-- Cyan -->
+    <color name="md_theme_onSecondary">#FFFFFF</color>
+    <color name="md_theme_secondaryContainer">#CFFAFE</color>
+    <color name="md_theme_onSecondaryContainer">#164E63</color>
+
+    <!-- Backgrounds & Surfaces -->
+    <color name="md_theme_background">#F8FAFC</color> <!-- Very Light Blue/Gray -->
+    <color name="md_theme_onBackground">#0F172A</color>
+    <color name="md_theme_surface">#FFFFFF</color>
+    <color name="md_theme_onSurface">#1E293B</color>
+
+    <!-- Status Colors -->
+    <color name="status_en_attente">#F59E0B</color> <!-- Amber -->
+    <color name="status_en_attente_bg">#FEF3C7</color>
+    <color name="status_confirme">#10B981</color> <!-- Emerald -->
+    <color name="status_confirme_bg">#D1FAE5</color>
+    <color name="status_annule">#EF4444</color> <!-- Red -->
+    <color name="status_annule_bg">#FEE2E2</color>
+
+    <color name="transparent">#00000000</color>
+</resources>

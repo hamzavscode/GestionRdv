@@ -4,68 +4,112 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp"
+    android:background="@drawable/bg_gradient"
     tools:context=".ui.login.LoginActivity">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="64dp"
+        android:src="@android:drawable/ic_menu_today"
+        app:tint="@color/md_theme_onPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Connexion"
-        android:textSize="28sp"
+        android:layout_marginTop="16dp"
+        android:text="GestionRdv"
+        android:textColor="@color/md_theme_onPrimary"
+        android:textSize="32sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/etEmailLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/etEmailLayout"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:hint="Email"
-        app:layout_constraintBottom_toTopOf="@+id/etPasswordLayout"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="48dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTitle">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etEmail"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:orientation="vertical"
+            android:padding="24dp">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/etPasswordLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:hint="Mot de passe"
-        app:passwordToggleEnabled="true"
-        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etEmailLayout">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bon retour !"
+                android:textColor="@color/md_theme_onSurface"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="24dp"/>
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword" />
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etEmailLayout"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                app:startIconDrawable="@android:drawable/ic_dialog_email">
 
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Se connecter"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etPasswordLayout" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/etPasswordLayout"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Mot de passe"
+                app:endIconMode="password_toggle"
+                app:startIconDrawable="@android:drawable/ic_lock_lock">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="32dp"
+                android:text="Se Connecter"
+                android:textSize="16sp"
+                app:cornerRadius="12dp" />
+
+            <TextView
+                android:id="@+id/tvGoToRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Pas encore inscrit ? Créer un compte"
+                android:textAlignment="center"
+                android:textColor="@color/md_theme_primary"
+                android:padding="8dp"
+                android:background="?attr/selectableItemBackground" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
