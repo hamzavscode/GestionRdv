@@ -1,30 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Primary Brand Colors -->
-    <color name="md_theme_primary">#2563EB</color> <!-- Blue -->
-    <color name="md_theme_onPrimary">#FFFFFF</color>
-    <color name="md_theme_primaryContainer">#DBEAFE</color>
-    <color name="md_theme_onPrimaryContainer">#1E3A8A</color>
+    <!-- Brand Colors -->
+    <color name="brand_blue">#0A2568</color> <!-- Primary Dark Blue -->
+    <color name="brand_blue_dark">#051540</color>
+    
+    <!-- Backgrounds -->
+    <color name="bg_light">#F5F7FA</color>
+    <color name="bg_white">#FFFFFF</color>
+    <color name="bg_splash_start">#F0F4F8</color>
+    <color name="bg_splash_end">#DDF1E6</color> <!-- Pale Mint -->
 
-    <!-- Secondary Brand Colors -->
-    <color name="md_theme_secondary">#0891B2</color> <!-- Cyan -->
-    <color name="md_theme_onSecondary">#FFFFFF</color>
-    <color name="md_theme_secondaryContainer">#CFFAFE</color>
-    <color name="md_theme_onSecondaryContainer">#164E63</color>
-
-    <!-- Backgrounds & Surfaces -->
-    <color name="md_theme_background">#F8FAFC</color> <!-- Very Light Blue/Gray -->
-    <color name="md_theme_onBackground">#0F172A</color>
-    <color name="md_theme_surface">#FFFFFF</color>
-    <color name="md_theme_onSurface">#1E293B</color>
-
-    <!-- Status Colors -->
-    <color name="status_en_attente">#F59E0B</color> <!-- Amber -->
-    <color name="status_en_attente_bg">#FEF3C7</color>
-    <color name="status_confirme">#10B981</color> <!-- Emerald -->
-    <color name="status_confirme_bg">#D1FAE5</color>
-    <color name="status_annule">#EF4444</color> <!-- Red -->
-    <color name="status_annule_bg">#FEE2E2</color>
-
+    <!-- Text Colors -->
+    <color name="text_primary">#1A1D1E</color>
+    <color name="text_secondary">#64748B</color>
+    
+    <!-- UI Elements -->
+    <color name="border_gray">#CBD5E1</color>
     <color name="transparent">#00000000</color>
 </resources>

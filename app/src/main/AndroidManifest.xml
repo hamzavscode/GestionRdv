@@ -8,6 +8,7 @@
     <uses-feature android:name="android.hardware.camera" android:required="false" />
 
     <application
+        android:name=".MainApplication"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -15,10 +16,10 @@
         android:supportsRtl="true"
         android:windowSoftInputMode="adjustResize"
         android:networkSecurityConfig="@xml/network_security_config"
-        android:theme="@style/Theme.GestionRendezVous">
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
         
         <activity
-            android:name=".ui.login.LoginActivity"
+            android:name=".ui.views.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,20 +27,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.register.RegisterActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".ui.add.AddEditRdvActivity" />
-        <activity android:name=".ui.detail.DetailRdvActivity" />
-
-        <provider
-            android:name="androidx.core.content.FileProvider"
-            android:authorities="${applicationId}.fileprovider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths" />
-        </provider>
+        <activity android:name=".ui.views.LoginActivity" />
+        <activity android:name=".ui.views.RegisterActivity" />
     </application>
-
 </manifest>

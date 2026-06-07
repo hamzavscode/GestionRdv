@@ -1,4 +1,4 @@
-package com.example.gestionrendez_vous.data.local
+package com.example.gestionrendez_vous.data.models
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -7,7 +7,8 @@ import androidx.room.PrimaryKey
 data class User(
     @PrimaryKey(autoGenerate = true)
     val id: Long = 0,
-    val nom: String,
+    val name: String,
     val email: String,
+    val role: String, // e.g., "Service Provider"
     val passwordHash: String
 )
