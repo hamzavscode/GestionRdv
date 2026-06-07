@@ -53,7 +53,8 @@ class LoginActivity : AppCompatActivity() {
         viewModel.loginStatus.observe(this) { success ->
             if (success) {
                 Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show()
-                // TODO: Navigate to Dashboard Phase 3
+                startActivity(Intent(this, MainActivity::class.java))
+                finish()
             }
         }
         
